@@ -53,3 +53,19 @@ font-family: 'Poppins', sans-serif;
 }
 
 /* Footer css : end */
+
+/* Page 404 css : start */
+.p404 {
+  min-height: 65vh;
+}
+
+.p404-title {
+  font-size: 100px;
+}
+
+.p404-btn:hover {
+  color: #fff !important;
+  background-color: #000;
+}
+
+/* Page 404 css : end */
