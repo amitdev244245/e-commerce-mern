@@ -10,8 +10,8 @@ font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
-.min-vh-85 {
-  min-height: 85.6vh;
+.min-vh-80 {
+  min-height: 80.7vh;
 }
 
 /* Header css : start */
@@ -45,3 +45,11 @@ font-family: 'Poppins', sans-serif;
 } */
 
 /* Header css : end */
+
+/* Footer css : start */
+.footer a:hover {
+  color: #ffefba !important;
+  border-bottom: 1px solid #ffefba;
+}
+
+/* Footer css : end */
