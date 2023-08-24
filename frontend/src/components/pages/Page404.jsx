@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Page404 = () => {
     return (
-        <Layout>
+        <Layout title={'PageNotFound - E-Commerce App 🛒'}>
             <div className="p404 d-flex flex-column align-items-center justify-content-center">
                 <h1 className="p404-title fw-bolder">404</h1>
                 <h2>Ooops! Page Not Found</h2>
