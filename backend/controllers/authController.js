@@ -26,7 +26,7 @@ const registerController = async (req, res) => {
         // check whether user already exists in database or not
         const existingUser = await userModel.findOne({ email });
         if (existingUser) {
-            return res.status(200).send({ success: true, message: "User already registered, Please login!" })
+            return res.status(200).send({ success: false, error: "User already registered, Please login!" })
         }
 
         // convert plain password to hash password
@@ -34,10 +34,10 @@ const registerController = async (req, res) => {
 
         // register user
         const user = await new userModel({ name, email, password: hashedPassword, mobile, address }).save()
-        res.status(201).send({ success: true, message: "User Register Successfully!", user })
+        res.status(201).send({ success: true, message: "User Registered Successfully!", user })
 
     } catch (error) {
-        res.status(500).send({ success: false, message: "Error in Registration", error: error });
+        res.status(500).send({ success: false, error: "Error in Registration", error: error });
     }
 }
 
@@ -61,7 +61,7 @@ const loginController = async (req, res) => {
         // compare password
         const match = await comparePassword(password, user.password);
         if (!match) {
-            return res.status(200).send({ success: false, message: "Invalid credentials!" })
+            return res.status(200).send({ success: false, error: "Invalid credentials!" })
         }
 
         // token
@@ -71,7 +71,7 @@ const loginController = async (req, res) => {
         res.status(200).send({ success: true, message: "User Logged in Successfully!", user: { name: user.name, email: user.email, mobile: user.mobile, address: user.address }, token })
 
     } catch (error) {
-        res.status(500).send({ success: false, message: "Error in Login", error: error });
+        res.status(500).send({ success: false, error: "Error in Login", error: error });
     }
 }
 

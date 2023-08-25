@@ -21,7 +21,9 @@ font-family: 'Poppins', sans-serif;
   box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
 }
 
-.navbar-nav li {
+.navbar-nav li,
+.signup-form,
+.login-form {
   border-radius: 5px;
   border: 1px solid #ceced1;
   transition: all 0.2s ease;
@@ -56,7 +58,7 @@ font-family: 'Poppins', sans-serif;
 
 /* Page 404 css : start */
 .p404 {
-  min-height: 65vh;
+  min-height: 81vh;
 }
 
 .p404-title {
@@ -69,3 +71,11 @@ font-family: 'Poppins', sans-serif;
 }
 
 /* Page 404 css : end */
+
+/* Signup, Login css : start */
+.signup,
+.login {
+  height: 81vh;
+}
+
+/* Register css : end */
